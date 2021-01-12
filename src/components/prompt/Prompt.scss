@@ -1,0 +1,43 @@
+.form-prompt{
+  position: relative;
+  display: inline-block;
+
+  .area-icons{
+    display: inline-block;
+    border-radius: 24px;
+    border: 1px solid #4c4c4c;
+    cursor: pointer;
+
+    svg{
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      margin: 0 7px;
+      position: relative;
+      bottom: 2px;
+    }
+  }
+
+  .area-prompt{
+    position: absolute;
+    bottom: -100%;
+    transform: translate(13px, 100%);
+    padding: 14px;
+    background: #606AB2;
+    color: #fff;
+    font-size: 14px;
+    z-index: 10000;
+    width: 240px;
+    font-weight: bold;
+
+    &:before{
+      content: "";
+      position: absolute;
+      top: -15px;
+      left: 0;
+      border: 12px solid transparent;
+      border-bottom: 12px solid #606AB2;
+      border-left: 12px solid #606AB2;
+    }
+  }
+}

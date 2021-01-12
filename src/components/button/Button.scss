@@ -1,0 +1,21 @@
+.form-button{
+  border: none;
+  padding: 6px 17px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  &.primary{
+    background: #FFB85C;
+    color: #fff;
+  }
+  &.secondary{
+    background: #d1d1d1;
+    color: #4c4c4c;
+  }
+  &:focus{
+    outline: none;
+  }
+  &:disabled{
+    opacity: 0.6;
+  }
+}

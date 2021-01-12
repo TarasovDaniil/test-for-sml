@@ -1,3 +1,5 @@
+@import-normalize;
+
 .App {
   text-align: center;
 }
@@ -26,6 +28,19 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.info{
+  background: #FAF5D7;
+  padding: 25px;
+
+  div{
+    padding: 4px 0;
+    color: #4c4c4c;
+    span{
+      font-weight: bold;
+    }
+  }
 }
 
 @keyframes App-logo-spin {

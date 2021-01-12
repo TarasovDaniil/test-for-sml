@@ -1,26 +1,43 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
+import Start from "./pages/Start";
+import Table from "./pages/Table";
+
+const App = () => {
+
+    return(
+        <Router>
+            <div className="container">
+                <nav>
+                    <ul>
+                        <li>
+                            <Link to="/">Рассчитать</Link>
+                        </li>
+                        <li>
+                            <Link to="/items">На согласовании</Link>
+                        </li>
+                    </ul>
+                </nav>
+                <Switch>
+                    <Route path="/items">
+                        <Table />
+                    </Route>
+                    <Route path="/">
+                        <Start />
+                    </Route>
+                </Switch>
+            </div>
+        </Router>
+    );
+};
 
 export default App;
